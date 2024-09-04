@@ -1,5 +1,5 @@
 #### General vars ####
-project_name = "linuxtips_ecs_cluster"
+project_name = "linuxtips-ecs-cluster"
 region       = "us-east-1"
 profile      = "linuxtips"
 
@@ -17,6 +17,6 @@ ssm_private_subnet_3 = "/linuxtips_vpc/vpc/subnet_private_1c"
 
 #### Balancer ####
 load_balancer_internal = false
-load_balancer_type = "application"
+load_balancer_type     = "application"
 
 
