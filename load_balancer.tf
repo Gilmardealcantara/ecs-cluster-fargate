@@ -22,6 +22,16 @@ resource "aws_security_group_rule" "ingress_80" {
   type              = "ingress"
 }
 
+resource "aws_security_group_rule" "ingress_433" {
+  cidr_blocks       = ["0.0.0.0/0"]
+  from_port         = 433
+  to_port           = 433
+  description       = "Allowing traffic on port 433"
+  protocol          = "tcp"
+  security_group_id = aws_security_group.lb.id
+  type              = "ingress"
+}
+
 
 resource "aws_lb" "main" {
   name               = format("%s-ingress", var.project_name)
