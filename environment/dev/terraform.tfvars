@@ -33,3 +33,8 @@ node_volume_type = "gp3"
 cluster_on_demand_min_size     = 2
 cluster_on_demand_max_size     = 4
 cluster_on_demand_desided_size = 3
+
+cluster_spot_min_size     = 2
+cluster_spot_max_size     = 4
+cluster_spot_desided_size = 3
+
