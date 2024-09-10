@@ -33,7 +33,7 @@ resource "aws_launch_template" "spots" {
   tag_specifications {
     resource_type = "instance"
     tags = {
-      Names = format("%s-on-demand", var.project_name)
+      Names = format("%s-spots", var.project_name)
     }
   }
 
