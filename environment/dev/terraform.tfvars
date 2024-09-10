@@ -24,9 +24,12 @@ load_balancer_type     = "application"
 # From cmd 'aws ssm get-parameters --names /aws/service/ecs/optimized-ami/amazon-linux-2/recommended'
 nodes_ami = "ami-09d3335e2eaf06692"
 
-node_intance_type = "t3a.large"
+node_instance_type = "t3a.large"
 
 node_volume_size = "50"
 
 node_volume_type = "gp3"
 
+cluster_on_demand_min_size     = 2
+cluster_on_demand_max_size     = 4
+cluster_on_demand_desided_size = 3
