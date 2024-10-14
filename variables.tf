@@ -1,3 +1,5 @@
+# tflint-ignore-file: terraform_typed_variables
+
 ### GENERAL CONFIGS ###
 
 variable "project_name" {}
@@ -25,19 +27,9 @@ variable "load_balancer_type" {}
 
 ### ECS General ####
 
-variable "nodes_ami" {}
-
-variable "node_instance_type" {}
-
-variable "node_volume_size" {}
-
-variable "node_volume_type" {}
-
-variable "cluster_on_demand_min_size" {}
-variable "cluster_on_demand_max_size" {}
-variable "cluster_on_demand_desided_size" {}
-
-variable "cluster_spot_min_size" {}
-variable "cluster_spot_max_size" {}
-variable "cluster_spot_desided_size" {}
-
+variable "capacity_providers" {
+  type = list(any)
+	default = [ 
+		"FARGATE", "FARGATE_SPOT"
+	]	
+}
